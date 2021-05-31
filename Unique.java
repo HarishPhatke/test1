@@ -5,33 +5,32 @@ import java.util.Scanner;
 public class Unique {
 
 	public static void main(String[] args) {
-		int i,j,count,n;
-		Scanner s = new Scanner(System.in);
-		System.out.println("Enter the number of array elements");
-		n = s.nextInt();
-		int[] arr = new int[n];
-		System.out.println("Enter the numbers");
-		for (i = 0; i < n; i++) 
-		{
-			arr[i] = s.nextInt();
-		}
-		for(i=0;i<n;i++)
-		{
-			count=0;
-			for(j=0;j<n;j++)
-			{
-				if(arr[i]==arr[j])
-				{
-					count++;
-				}
-				
-			}
-			if(count==1)
-			{
-				System.out.println(arr[i]);
-			}
-		}
+		int arr[]= {1,2,3,2,3,3,4};
+		
+		uniqueNumber(arr);
 
 	}
+	
+	public static void uniqueNumber(int arr[])
+	{
+		int i,j;
+		int length=arr.length;
+		System.out.println("unique numbers");
+		for(i=0;i<length;i++)
+		{
+			for(j=0;j<i;j++)
+			
+				if(arr[i]==arr[j])
+				
+					break;
+			
+				
+				if(i==j)
+				
+					System.out.print(arr[i]+" ");
+				
+			}
+		}
+	}
 
-}
+
