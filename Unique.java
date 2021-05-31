@@ -5,29 +5,29 @@ import java.util.Scanner;
 public class Unique {
 
 	public static void main(String[] args) {
-		int arr[]= {1,2,3,2,3,3,4};
+		int a[]= {1,2,3,2,3,3,4};
 		
-		uniqueNumber(arr);
+		FinduniqueNumber(a);
 
 	}
 	
-	public static void uniqueNumber(int arr[])
+	public static void FinduniqueNumber(int a[])
 	{
 		int i,j;
-		int length=arr.length;
+		int length=a.length;
 		System.out.println("unique numbers");
 		for(i=0;i<length;i++)
 		{
 			for(j=0;j<i;j++)
 			
-				if(arr[i]==arr[j])
+				if(a[i]==a[j])
 				
 					break;
 			
 				
 				if(i==j)
 				
-					System.out.print(arr[i]+" ");
+					System.out.print(a[i]+" ");
 				
 			}
 		}
